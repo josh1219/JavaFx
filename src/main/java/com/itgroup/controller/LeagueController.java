@@ -49,6 +49,7 @@ public class LeagueController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        // 커밋 테스트
         Image image2 = new Image(getClass().getResource("/com/itgroup/images/main/main.jpg").toExternalForm());
         imageView2.setImage(image2);
 
