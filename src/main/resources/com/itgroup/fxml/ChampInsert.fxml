@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.scene.text.Font?>
+<?import com.sun.javafx.scene.control.DoubleField?>
+<AnchorPane prefHeight="600.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itgroup.controller.ChampInsertController">
+    <children>
+        <!-- 변수 정의 -->
+        <fx:define>
+            <Double fx:id="xLabelPosition" fx:value="40.0"/><!-- 라벨의 x 좌표 위치 -->
+            <Double fx:id="xTextFieldPosition" fx:value="135.0"/><!-- 입력 상자의 x 좌표 위치 -->
+            <Double fx:id="textFiedWidth" fx:value="200.0"/><!-- 입력 상자의 너비 -->
+        </fx:define>
+        <Label layoutX="$xLabelPosition" layoutY="17.0" text="챔피언 등록 화면">
+            <font>
+                <Font size="25.0"/>
+            </font>
+        </Label>
+
+        <!-- Product 클래스를 토대로 fxml 파일 내에서 다음과 같이 camel case 표기법으로 작성합니다. -->
+        <Label layoutX="$xLabelPosition" layoutY="60.0" text="챔피언명">
+            <font>
+                <Font size="15.0" fx:id="myFont01"/>
+            </font>
+        </Label>
+        <TextField fx:id="fxmlNAME" layoutX="$xTextFieldPosition" layoutY="60.0" prefWidth="$textFiedWidth" text=""/>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="90.0" text="포지션"/>
+        <ComboBox fx:id="fxmlPOSITION" layoutX="$xTextFieldPosition" layoutY="90.0" prefWidth="$textFiedWidth">
+            <items>
+                <!-- factory 속성은 자바의 static 메소드를 객체를 생성하고자 할때 사용합니다. -->
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="-- 카테고리를 선택해 주세요." />
+                    <String fx:value="탑" />
+                    <String fx:value="정글" />
+                    <String fx:value="미드" />
+                    <String fx:value="원딜" />
+                    <String fx:value="서포터" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="120.0" text="패시브 이미지"/>
+        <TextField fx:id="fxmlPIMAGE" layoutX="$xTextFieldPosition" layoutY="120.0" prefWidth="$textFiedWidth" text=""/>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="150.0" text="패시브 이름"/>
+        <TextField fx:id="fxmlPNAME" layoutX="$xTextFieldPosition" layoutY="150.0" prefWidth="$textFiedWidth" text=""/>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="180.0" text="q스킬 이미지"/>
+        <TextField fx:id="fxmlQIMAGE" layoutX="$xTextFieldPosition" layoutY="180.0" prefWidth="$textFiedWidth" text=""/>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="210.0" text="q스킬 이름"/>
+        <TextField fx:id="fxmlQNAME" layoutX="$xTextFieldPosition" layoutY="210.0" prefWidth="$textFiedWidth" text=""/>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="240.0" text="w스킬 이미지"/>
+        <TextField fx:id="fxmlWIMAGE" layoutX="$xTextFieldPosition" layoutY="240.0" prefWidth="$textFiedWidth" text=""/>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="270.0" text="w스킬 이름"/>
+        <TextField fx:id="fxmlWNAME" layoutX="$xTextFieldPosition" layoutY="270.0" prefWidth="$textFiedWidth" text=""/>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="300.0" text="e스킬 이미지"/>
+        <TextField fx:id="fxmlEIMAGE" layoutX="$xTextFieldPosition" layoutY="300.0" prefWidth="$textFiedWidth" text=""/>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="330.0" text="e스킬 이름"/>
+        <TextField fx:id="fxmlENAME" layoutX="$xTextFieldPosition" layoutY="330.0" prefWidth="$textFiedWidth" text=""/>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="360.0" text="r스킬 이미지"/>
+        <TextField fx:id="fxmlRIMAGE" layoutX="$xTextFieldPosition" layoutY="360.0" prefWidth="$textFiedWidth" text=""/>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="390.0" text="r스킬 이름"/>
+        <TextField fx:id="fxmlRNAME" layoutX="$xTextFieldPosition" layoutY="390.0" prefWidth="$textFiedWidth" text=""/>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="420.0" text="대표 스킨"/>
+        <TextField fx:id="fxmlSKIN" layoutX="$xTextFieldPosition" layoutY="420.0" prefWidth="$textFiedWidth" text=""/>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="450.0" text="챔피언 설명"/>
+        <TextField fx:id="fxmlCHAMPEXPLANATION" layoutX="$xTextFieldPosition" layoutY="450.0" prefWidth="$textFiedWidth" text=""/>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="480.0" text="일러스트"/>
+        <TextField fx:id="fxmlILLUSTRATION" layoutX="$xTextFieldPosition" layoutY="480.0" prefWidth="$textFiedWidth" text=""/>
+    </children>
+
+    <Button layoutX="$xLabelPosition" prefWidth="300" layoutY="530.0" mnemonicParsing="false" text="등록하기" onAction="#onProductInsert">
+        <font>
+            <Font name="System Bold" size="20.0"/>
+        </font>
+    </Button>
+
+</AnchorPane>

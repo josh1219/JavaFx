@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<AnchorPane prefHeight="430.0" prefWidth="220.0" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.itgroup.controller.ChampController">
+    <children>
+    <!-- 변수 정의 -->
+    <fx:define>
+        <Double fx:id="xLabelPosition" fx:value="90.0"/><!-- 라벨의 x 좌표 위치 -->
+        <Double fx:id="xTextFieldPosition" fx:value="135.0"/><!-- 입력 상자의 x 좌표 위치 -->
+        <Double fx:id="textFiedWidth" fx:value="200.0"/><!-- 입력 상자의 너비 -->
+    </fx:define>
+    <Label layoutX="50" layoutY="17.0" text="스킬 설명">
+        <font>
+            <Font size="25.0"/>
+        </font>
+    </Label>
+        <ImageView fx:id="pImage" fitHeight="60" fitWidth="80" pickOnBounds="true" layoutX="20" layoutY="60.0" preserveRatio="true" />
+        <Label fx:id="pName" layoutX="$xLabelPosition" layoutY="60.0" text=""/>
+
+        <ImageView fx:id="qImage" fitHeight="60" fitWidth="80" pickOnBounds="true" layoutX="20" layoutY="130.0" preserveRatio="true" />
+        <Label fx:id="qName" layoutX="$xLabelPosition" layoutY="130.0" text=""/>
+
+        <ImageView fx:id="wImage" fitHeight="60" fitWidth="80" pickOnBounds="true" layoutX="20" layoutY="200.0" preserveRatio="true" />
+        <Label fx:id="wName" layoutX="$xLabelPosition" layoutY="200.0" text=""/>
+
+        <ImageView fx:id="eImage" fitHeight="60" fitWidth="80" pickOnBounds="true" layoutX="20" layoutY="270.0" preserveRatio="true" />
+        <Label fx:id="eName" layoutX="$xLabelPosition" layoutY="270.0" text=""/>
+
+        <ImageView fx:id="rImage" fitHeight="60" fitWidth="80" pickOnBounds="true" layoutX="20" layoutY="340.0" preserveRatio="true" />
+        <Label fx:id="rName" layoutX="$xLabelPosition" layoutY="340.0" text=""/>
+
+    </children>
+</AnchorPane>

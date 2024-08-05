@@ -1,0 +1,28 @@
+/* 타입 선택자 (띄어쓰기를 했을 때 적용이 되지 않는다)*/
+Label{
+    -fx-font-size:16px;
+}
+/* #은 fxml파일내의 id속성을 의미한다 (id선택자)*/
+#labelId{
+    -fx-background-color :red;
+    -fx-text-fill :pink;
+}
+/* .은 fxml파일내의 class를 의미한다 (class선택자)*/
+.labelClass{
+    -fx-background-color :blue;
+    -fx-text-fill :yellow;
+}
+TextField:focused{
+    -fx-border-color:skyblue;
+    -fx-background-color:yellow;
+}
+Button:hover{
+    -fx-border-color:skyblue;
+    -fx-background-color:yellow;
+}
+Button:pressed{
+    -fx-border-color:skyblue;
+    -fx-background-color:red;
+}
+
+

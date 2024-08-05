@@ -1,0 +1,54 @@
+/* styles.css */
+.root {
+    -fx-font-family: 'Arial';
+}
+
+.button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.button:hover {
+    -fx-background-color: #0056b3;
+}
+
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+}
+#modeChoice, #pageStatus{
+    -fx-padding: 3;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+}
+.combo-box {
+    -fx-background-color: #fff;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5;
+    /*-fx-padding: 5 10;*/
+}
+
+.table-view {
+    /*-fx-border-color: #ccc;*/
+    -fx-border-radius: 5;
+}
+
+.pagination {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 5;
+    -fx-padding: 10;
+}
+
+.image-view {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 5);
+    -fx-border-color: #ccc;
+}
+.vbox {
+-fx-border-radius: 5;
+}
